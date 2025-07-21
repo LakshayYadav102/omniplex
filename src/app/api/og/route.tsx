@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { ImageResponse } from "next/og";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../../../firebaseConfig";
