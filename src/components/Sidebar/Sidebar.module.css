@@ -10,12 +10,15 @@
   z-index: 10;
   transition: all 1s;
 }
+
 .opening {
   animation: slideInFromLeft 300ms ease-in-out forwards;
 }
+
 .closing {
   animation: slideOutToLeft 300ms ease-in-out forwards;
 }
+
 .header {
   position: fixed;
   width: 100%;
@@ -27,10 +30,12 @@
   align-items: flex-start;
   z-index: 2;
 }
+
 .menu {
   margin-top: 6px;
   cursor: pointer;
 }
+
 .titleButton {
   margin: 8px;
   padding: 6px 12px;
@@ -43,12 +48,15 @@
   background-color: #2e2e2e;
   transition: all 0.25s ease-in-out;
 }
+
 .titleButton:hover {
   background-color: #ffffff14;
 }
+
 .titleButtonIcon {
   margin-right: 8px;
 }
+
 .titleButtonText {
   font-size: 14px;
   line-height: 20px;
@@ -56,6 +64,7 @@
   font-weight: 500;
   color: #ffffff;
 }
+
 .barContainer {
   min-width: 70px;
   height: 100%;
@@ -67,12 +76,14 @@
   border-right: 1px solid #ffffff14;
   background-color: #232323;
 }
+
 .logo {
   width: 36px;
   height: 36px;
   margin-top: 8px;
   margin-bottom: 24px;
 }
+
 .iconContainer {
   flex: 1;
   display: flex;
@@ -80,6 +91,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .icon {
   width: 42px;
   height: 42px;
@@ -88,6 +100,7 @@
   cursor: pointer;
   transition: all 0.25s ease-in-out;
 }
+
 .iconActive {
   width: 42px;
   height: 42px;
@@ -98,16 +111,39 @@
   background-color: #ffffff14;
   transition: all 0.25s ease-in-out;
 }
+
 .icon:hover {
   background-color: #ffffff10;
   border-radius: 6px;
 }
+
+.sidebarLink {
+  width: 42px;
+  height: 42px;
+  padding: 4px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sidebarLink:hover {
+  background-color: #ffffff10;
+  border-radius: 6px;
+}
+
 .mainContainer {
   width: 256px;
   height: 100%;
   padding: 8px;
   background-color: #232323;
 }
+
 .list {
   width: 100%;
   height: auto;
@@ -116,6 +152,7 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+
 .titleContainer {
   width: 100%;
   height: 36px;
@@ -126,12 +163,14 @@
   margin-top: 10px;
   padding: 0px 4px;
 }
+
 .title {
   font-size: 21px;
   line-height: 24px;
   font-weight: 500;
   color: #e8e8e6;
 }
+
 .titleButtonRow {
   gap: 8px;
   display: flex;
@@ -140,6 +179,7 @@
   align-items: center;
   transition: all 0.25s ease-in-out;
 }
+
 .titleButton {
   padding: 6px 12px;
   border-radius: 8px;
@@ -151,14 +191,17 @@
   transition: all 0.25s ease-in-out;
   background-color: #2e2e2e;
 }
+
 .titleButton:hover {
   background-color: #ffffff14;
 }
+
 .titleButtonIcon {
   width: 24px;
   height: 24px;
   margin-right: 8px;
 }
+
 .titleButtonText {
   font-size: 14px;
   line-height: 20px;
@@ -166,6 +209,7 @@
   font-weight: 500;
   color: #ffffff;
 }
+
 .listContainer {
   width: 100%;
   height: 100%;
@@ -178,6 +222,7 @@
   padding-bottom: 16px;
   scrollbar-width: none;
 }
+
 .emptyState {
   flex: 1;
   width: 100%;
@@ -187,10 +232,12 @@
   justify-content: center;
   align-items: center;
 }
+
 .emptyStateIcon {
   width: 120px;
   height: 120px;
 }
+
 .emptyStateText {
   width: 80%;
   margin-top: 16px;
@@ -200,6 +247,7 @@
   color: #e8e8e6aa;
   text-align: center;
 }
+
 .listHeader {
   font-size: 14px;
   line-height: 16px;
@@ -210,6 +258,7 @@
   margin-bottom: 4px;
   cursor: pointer;
 }
+
 .listItem {
   width: 100%;
   padding: 8px 12px;
@@ -225,18 +274,22 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .listItem:hover {
   background-color: #ffffff14;
 }
+
 .listItem:hover .bin {
   opacity: 1;
 }
+
 .bin {
   width: 18px;
   height: 18px;
   opacity: 0;
   transition: opacity 0.25s ease-in-out;
 }
+
 .listRow {
   width: 100%;
   display: flex;
@@ -244,14 +297,17 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .selector {
   width: 100%;
   padding: 4px 12px;
 }
+
 .slider {
   width: 100%;
   padding: 4px 12px;
 }
+
 .thumb {
   cursor: grab;
   width: 16px;
@@ -260,13 +316,16 @@
   margin-top: 2px;
   background-color: #e8e8e6;
 }
+
 .thumb:active {
   cursor: grabbing;
 }
+
 .textareaContainer {
   width: 100%;
   padding: 0px 12px;
 }
+
 .textarea {
   width: 100%;
   height: 256px;
@@ -279,6 +338,7 @@
   border-radius: 8px;
   resize: none;
 }
+
 .textarea:focus {
   outline: none;
 }
@@ -295,10 +355,12 @@
     align-items: center;
     background-color: #232323;
   }
+
   .menu {
     margin-top: 0px;
     cursor: pointer;
   }
+
   .titleButton {
     margin: 0px;
     padding: 0px;
@@ -307,12 +369,15 @@
     justify-content: center;
     align-items: center;
   }
+
   .titleButton:hover {
     background-color: transparent;
   }
+
   .titleButtonIcon {
     margin-right: 0px;
   }
+
   .titleButtonText {
     display: none;
   }
@@ -329,6 +394,7 @@
   transition: all 1s;
   animation: fadeInFromNone 300ms ease-in-out;
 }
+
 .mobileOverlayClosing {
   animation: fadeOutToNone 300ms ease-in-out forwards;
 }

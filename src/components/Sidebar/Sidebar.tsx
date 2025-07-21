@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./Sidebar.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import History from "../History/History";
 import Library from "../Library/Library";
 import Plugins from "../Plugins/Plugins";
@@ -196,6 +197,9 @@ const Sidebar = () => {
                   )}
                 </div>
                 <div>
+                  <Link href="/checkout">
+                    <div className={styles.sidebarLink}>🌟 Upgrade to Pro</div>
+                  </Link>
                   <Image
                     src={Collapse}
                     alt="Collapse"
