@@ -1,11 +1,11 @@
-// Import the functions you need from the SDKs you need
+// Import the functions you need from the SDKs
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getStorage } from "firebase/storage";
 import { getFirestore } from "firebase/firestore";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+let analytics = null; // ✅ Valid in JavaScript
+
+// Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyDNcvzd8BGSB1Qv7CO78mKtm4YU1vd7oSY",
   authDomain: "omniplex-9b9ff.firebaseapp.com",
@@ -18,12 +18,22 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const db = getFirestore(app);
 const storage = getStorage(app);
 
-export { db, storage, analytics };
+// Conditionally initialize analytics on client only
+if (typeof window !== "undefined") {
+  import("firebase/analytics").then(({ getAnalytics, isSupported }) => {
+    isSupported().then((supported) => {
+      if (supported) {
+        analytics = getAnalytics(app);
+      }
+    });
+  });
+}
 
-export const initializeFirebase = () => {
-  return app;
-};
+// Export everything
+export { app, db, storage, analytics };
+
+// Optional: expose app init function
+export const initializeFirebase = () => app;
